@@ -1,0 +1,40 @@
+.container{
+    display: grid;
+    grid-template-areas: 'header header'
+                        'sidebar photos';
+}
+
+header{
+    grid-area: header;
+}
+
+#sidebar{
+    grid-area: sidebar;
+}
+
+#foto-container{
+    grid-area: photos;
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        grid-template-areas: 'header'
+                            'sidebar'
+                            'photos';
+    }
+}
+
+@media screen and (min-width: 600px){
+    .container{
+        grid-template-areas: 'header'
+                            'sidebar'
+                            'photos';
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        grid-template-areas: 'header header'
+                            'sidebar photos';
+    }
+}

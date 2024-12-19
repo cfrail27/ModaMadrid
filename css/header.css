@@ -1,0 +1,59 @@
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    height: 150px;
+}
+
+header h1{
+    margin: 30px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+header ul{
+    flex-grow: 1;
+    margin: 20px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin: 10px;
+    color: black;
+    transition: all 0.3s;
+}
+
+header ul li a:hover, header ul li a.active{
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+@media only screen and (min-width: 1200px){ /*1200px o más el texto estará alineado a la izquierda*/
+    header h1{
+        text-align: left;
+    }
+
+    header ul{
+        justify-content: flex-end;
+    }
+
+}
+
+@media only screen and (max-width: 438px){
+    header img{
+        display: block;
+        width: 40%;
+        margin: auto;
+    }
+}
